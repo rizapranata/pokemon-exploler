@@ -33,18 +33,6 @@ const PokemonTable: React.FC = () => {
     setOffset(0);
   };
 
-  if (loading) {
-    return (
-      <div className="flex my-52 justify-center">
-        <CircularProgress
-          pathColor="blue"
-          textColor="black"
-          trailColor="grey"
-        />
-      </div>
-    );
-  }
-
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Pokemon Data Table</h1>
@@ -88,7 +76,13 @@ const PokemonTable: React.FC = () => {
             {loading ? (
               <tr>
                 <td colSpan={2} className="text-center py-4">
-                  Loading...
+                  <div className="flex my-52 justify-center">
+                    <CircularProgress
+                      pathColor="blue"
+                      textColor="black"
+                      trailColor="grey"
+                    />
+                  </div>
                 </td>
               </tr>
             ) : filteredPokemons.length > 0 ? (
