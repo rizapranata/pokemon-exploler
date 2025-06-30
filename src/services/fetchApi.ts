@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import pokemonApi from "./pokemonApi"; // atau "githubApi" jika kamu tetap pakai nama itu
+import pokemonApi from "./pokemonApi";
 
 interface ParamsTypes {
   limit: number;
